@@ -23,3 +23,15 @@ If you are not using BGP, you can configure forced tunneling by setting _Private
 ## Verify
 
 Once either of the above methods are complete, and your IPsec connections is in a _connected_ state, you can observe _effective routes_ for the Default Routing table and you should see 0.0.0.0/0 with a next hop of VPN_S2S_Gateway.
+
+## Propagate
+
+Now that you have an active default route within the hub, you need to choose which VNet and/or branch connections to send this default route to, via connection specific toggles. Without turning these toggles to yes, the default route will not be active within those connections.
+
+E.g. VNet
+
+![image](image2.png)
+
+E.g. ExpressRoute 
+
+![image](image3.png)
